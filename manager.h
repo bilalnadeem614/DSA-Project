@@ -2,28 +2,25 @@
 #include <cstdlib>
 #include "call.h"
 
-using namespace std;
-
-void mainMenu()
-{
+void mview(){
     system("cls");
     int choice;
     cout << "\t\t------------------" << endl;
     cout << "\t\t   ---Welcome--- " << endl;
     cout << "\t\t------------------" << endl;
-    cout << "\t\tHow do you want to continue?" << endl;
-    cout << "\t\t1--> Manager" << endl;
-    cout << "\t\t2--> Waiter" << endl;
+    cout << "\t\tWhat do you want?" << endl;
+    cout << "\t\t1--> View Orders" << endl;
+    cout << "\t\t2--> View Remainging Tables" << endl;
     cout << "\t\tEnter your choice:--> ";
     cin >> choice;
 
     switch (choice)
     {
     case 1:
-        mview();
+        //mview();
         break;
     case 2:
-        wview();
+        //wview();
         break;
 
     default:
