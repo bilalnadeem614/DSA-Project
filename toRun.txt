@@ -1,0 +1,1 @@
+g++ main.cpp manager.cpp menu.cpp waiter.cpp mainmenu.cpp order.cpp

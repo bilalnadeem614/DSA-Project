@@ -1,13 +1,12 @@
-#include<iostream>
 #include "call.h"
-
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <cstring>
 using namespace std;
- 
+
 int main()
 {
-    mainMenu();
-
- 
- 
+    mMenu();
     return 0;
 }
