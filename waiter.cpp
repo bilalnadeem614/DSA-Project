@@ -12,9 +12,8 @@ void wview()
     cout << "\t\tWhat do you want?" << endl;
     cout << "\t\t1--> View Menu" << endl;
     cout << "\t\t2--> Take Order" << endl;
-    cout << "\t\t3--> View Orders" << endl;
-    cout << "\t\t4--> Back to Main Menu" << endl;
-    cout << "\t\t5--> Exit the Program" << endl;
+    cout << "\t\t3--> Back to Main Menu" << endl;
+    cout << "\t\t4--> Exit the Program" << endl;
     cout << "\t\tEnter your choice:--> ";
     cin >> ch;
 
@@ -28,14 +27,10 @@ void wview()
         break;
 
     case 3:
-
-        break;
-
-    case 4:
         mMenu();
         break;
 
-    case 5:
+    case 4:
         return;
         break;
 

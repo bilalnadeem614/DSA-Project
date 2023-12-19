@@ -9,7 +9,7 @@ public:
     int itemPrice;
     node *next;
 
-    node(string iPN,int iPr) : itemName(iPN),itemPrice(iPr), next(nullptr)
+    node(string iPN, int iPr) : itemName(iPN), itemPrice(iPr), next(nullptr)
     {
     }
 };
@@ -21,9 +21,9 @@ private:
 
 public:
     // Function to insert a node in the Menu
-    void insertInMenu(string n,int p)
+    void insertInMenu(string n, int p)
     {
-        node *newNode = new node(n,p);
+        node *newNode = new node(n, p);
         newNode->next = headPtr;
         headPtr = newNode;
     }
@@ -34,26 +34,26 @@ public:
         node *temp = headPtr;
         while (temp != nullptr)
         {
-            cout <<"\t\t"<< temp->itemName << " "<<temp->itemPrice<<endl;
+            cout << "\t\t" << temp->itemName << " " << temp->itemPrice << endl;
             temp = temp->next;
         }
         cout << endl;
     }
 };
 
-
-void foodMenu(){
+void foodMenu()
+{
     system("cls");
     menuList meatMenu;
 
-    meatMenu.insertInMenu("Chicken",1200);
-    meatMenu.insertInMenu("Beef",2500);
-    meatMenu.insertInMenu("Fried Fish",2200);
+    meatMenu.insertInMenu("Chicken", 1200);
+    meatMenu.insertInMenu("Beef", 2500);
+    meatMenu.insertInMenu("Fried Fish", 2200);
 
-    cout<<"\t\tMeat Items (Rates per KG)"<<endl;
+    cout << "\t\tMeat Items (Rates per KG)" << endl;
     meatMenu.displayMenu();
 
-    cout<<"-------------------------------"<<endl;
+    cout << "\t\t-------------------------------" << endl;
 
     menuList vegMenu;
 
@@ -62,20 +62,22 @@ void foodMenu(){
     vegMenu.insertInMenu("Daal Chana", 250);
     vegMenu.insertInMenu("Sabzi", 250);
 
-    cout<<"\t\tVeg Items (Rates per Plate)"<<endl;
+    cout << "\t\tVeg Items (Rates per Plate)" << endl;
     vegMenu.displayMenu();
 
-    cout << "-------------------------------" << endl;
-    cout<<endl;
+    cout << "\t\t-------------------------------" << endl;
+    cout << endl;
 
-    cout<<"Proceed to order(Y/N):--> ";
+    cout << "Do you want to give order(Y/N):--> ";
     char ch;
-    cin>>ch;
+    cin >> ch;
 
-    if(ch=='Y'||ch=='y'){
+    if (ch == 'Y' || ch == 'y')
+    {
         TakeOrd();
     }
-    else{
-        mMenu();
+    else
+    {
+        table();
     }
 }

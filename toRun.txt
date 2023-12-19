@@ -1,1 +1,1 @@
-g++ main.cpp manager.cpp menu.cpp waiter.cpp mainmenu.cpp order.cpp -o main.exe
+g++ main.cpp manager.cpp menu.cpp waiter.cpp mainmenu.cpp order.cpp table.cpp -o main.exe

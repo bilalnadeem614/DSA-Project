@@ -11,4 +11,6 @@ void wview();
 void mview();
 void foodMenu();
 void TakeOrd();
+void table();
+void OView();
     // #endif

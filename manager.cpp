@@ -28,7 +28,7 @@ void mview()
         break;
 
     case 3:
-
+        OView();
         break;
 
     case 4:

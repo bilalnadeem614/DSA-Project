@@ -25,21 +25,24 @@ struct Order
 // Function to take orders with predefined menu items
 void takeOrders(queue<Order> &orders)
 {
+    system("cls");
     menuItems items;
     char choice;
     do
     {
         cout << "Menu Items:" << endl;
-        cout << "1. Chicken\n2. Beef\n3. Fried Fish\n4. Daal Chana\n5. Daal Massh\n6. Daal Sabzi\n7. Sabzi\n";
+        cout << "1. Chicken\t Rs.1200(per Kg)\n2. Beef\t Rs.2500(per Kg)\n3. Fried Fish\t Rs.2200(per Kg)\n4. Daal Chana\t Rs.250(per Plate) \n5. Daal Massh \tRs.300 (per Plate)\n6. Sabzi\tRs.200(per Plate) \n"
+             << endl;
 
         int option;
-        cout << "Enter the item number: ";
+        cout << "Enter the item number:--> ";
         cin >> option;
 
         if (option < 1 || option > 7)
         {
             cout << "Invalid item number. Please choose a valid option." << endl;
-            continue;
+            // continue;
+            TakeOrd();
         }
 
         int quantity;
@@ -75,30 +78,56 @@ void takeOrders(queue<Order> &orders)
         cin >> choice;
 
     } while (choice == 'y' || choice == 'Y');
+    mMenu();
 }
 
 // Function to display all orders in the queue
 void displayOrders(const queue<Order> &orders)
 {
+    queue<Order> tempQueue = orders;
+    if (tempQueue.empty())
+    {
+        cout << "There is No order placed" << endl;
+    }
+    
+
     cout << "Current Orders in the Queue:" << endl;
 
-    queue<Order> tempQueue = orders;
     while (!tempQueue.empty())
     {
         Order currentOrder = tempQueue.front();
-        cout << "Item: " << currentOrder.itemName << " (Quantity: " << currentOrder.quantity << ", Price: " << currentOrder.price << ")" << endl;
+        cout << "Item: " << currentOrder.itemName << "\n Quantity: " << currentOrder.quantity << "\n Price: " << currentOrder.price << "\n"
+             << endl;
         tempQueue.pop();
     }
 
-    cout << "End of orders." << endl;
-}
+    cout << "Enter (Y/y) to back to main menu" << endl;
 
-void TakeOrd(){
-    queue<Order> orders;
+    char ch;
+    cin >> ch;
+    if (ch == 'Y' || ch == 'y')
+    {
+        mMenu();
+    }
+    else
+    {
+        mMenu();
+    }
+    return;
+}
+queue<Order> orders;
+void TakeOrd()
+{
+    system("cls");
 
     // Taking orders
     takeOrders(orders);
 
     // Displaying orders
+   // displayOrders(orders);
+}
+
+void OView()
+{
     displayOrders(orders);
 }
